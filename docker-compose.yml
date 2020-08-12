@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  mhfr-service:
+    build: "./node-app/"
+    ports:
+      - "433:433"
+  nginx-proxy:
+    build: "./nginx-config/"
+    ports:
+      - "3002:80"
